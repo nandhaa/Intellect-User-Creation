@@ -1,0 +1,19 @@
+package com.pack.intellect;
+
+import java.util.ArrayList;
+
+public class DeleteUser {
+	
+	public void invalidateUser(ArrayList<UserDetailsBean> getuser){
+
+		for(UserDetailsBean bean : getuser){
+			String id = bean.getId();
+			String checkId = "1528238";
+				if(id.equals(checkId)) {
+					bean.setActive(false);
+					System.out.println("The user("+ id +") is deactivated Successfully updated...");
+				}
+			}
+		}
+
+    }
