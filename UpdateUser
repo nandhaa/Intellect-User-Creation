@@ -1,0 +1,35 @@
+package com.pack.intellect;
+
+import java.util.ArrayList;
+
+public class UpdateUser {
+  
+	public void updateMethod(ArrayList getuser) {
+		CreateUser user = new  CreateUser();
+		validate(getuser);
+	}
+	
+	
+	public void validate(ArrayList<UserDetailsBean> getuser){
+		
+		for(UserDetailsBean bean : getuser){
+			String id = bean.getId();
+			String checkId = "1528236";
+			String checkId1 = "1528237";
+			int pincode = 600049;
+			if(id.equals(checkId)){
+				System.out.println("The user("+ id +") does not exist...");
+				continue;
+			}
+			else if(id.equals(checkId1)) {
+				bean.setPincode(pincode);
+				System.out.println("The user("+ id +") Pincode " + pincode + " Successfully updated...");
+				
+			}
+		}
+		
+	}
+	
+	
+	
+}
